@@ -15,4 +15,5 @@ Let's have some fun
 # ps
 * I change OpenAIEmbeddings() to HuggingFaceInstructEmbeddings() since my free openAI toke exced the quota as always.
 * building 'vectordb = Chroma.from_documents(documents=splits, embedding=embedding)' and 'retriever.add_documents(docs, ids=None)' takes very long time
+* the last case has some env error about 'lark' package
 
