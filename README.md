@@ -11,3 +11,8 @@ Let's have some fun
 * **Parent Document Retriever** - Split and embed *small* chunks (for maximum information density), then return the parent documents (or larger chunks) those small chunks come from
 * **Ensemble Retriever** - Combine multiple retrievers together
 * **Self-Query** - When the retriever infers filters from a users query and applies those filters to the underlying data
+
+# ps
+* I change OpenAIEmbeddings() to HuggingFaceInstructEmbeddings() since my free openAI toke exced the quota as always.
+* building 'vectordb = Chroma.from_documents(documents=splits, embedding=embedding)' and 'retriever.add_documents(docs, ids=None)' takes very long time
+
