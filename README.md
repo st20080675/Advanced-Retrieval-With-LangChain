@@ -13,7 +13,11 @@ Let's have some fun
 * **Self-Query** - When the retriever infers filters from a users query and applies those filters to the underlying data
 
 # ps
-* I change OpenAIEmbeddings() to HuggingFaceInstructEmbeddings() since my free openAI toke exced the quota as always.
+* I change OpenAIEmbeddings() to HuggingFaceInstructEmbeddings() since my free openAI toke exced the quota as always (RateLimitError: Error code: 429).
+* I changed 'llm = ChatOpenAI(temperature=0)' to 'llm=HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.7, "max_length":512})'
+* my llm inputs must have less than 1024 tokens
 * building 'vectordb = Chroma.from_documents(documents=splits, embedding=embedding)' and 'retriever.add_documents(docs, ids=None)' takes very long time
 * the last case has some env error about 'lark' package
+* my model has smaller 
+  
 
